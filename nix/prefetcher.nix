@@ -4,7 +4,7 @@
 }:
 pkgs.callPackage (import ./.) {
   buildGoModule = pkgs.buildGo118Module;
-  vendorSha256 = sha256;
+  vendorHash = sha256;
 }
 // {
   outputHash = sha256;

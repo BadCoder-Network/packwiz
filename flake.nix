@@ -31,7 +31,7 @@
       in rec {
         packwiz = pkgs.callPackage ./nix {
           version = substring 0 8 self.rev or "dirty";
-          vendorSha256 = readFile ./nix/vendor-sha256;
+          vendorHash = readFile ./nix/vendor-sha256;
           buildGoModule = pkgs.buildGo120Module;
         };
         # Build packwiz by default when no package name is specified
